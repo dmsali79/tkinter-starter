@@ -3,8 +3,10 @@
 from tkinter import * # import Tkinter library
 window = Tk()         # Create the application window
 
+
 from tkinter.ttk import Progressbar
 bar = Progressbar(window, length=200)
+
 
 # Add a label with the text "Hello"
 lbl = Label(window, text="Hello", font =("Arial Bold", 100))
@@ -21,6 +23,7 @@ btn = Button(window, text="Yes")
  
 btn.grid(column=1, row=0)
 
+
 chk_state = BooleanVar()
  
 chk_state.set(True) #set check state
@@ -29,17 +32,13 @@ chk = Checkbutton(window, text='Pick me!', var=chk_state)
  
 chk.grid(column=0, row=0)
 
-def clicked():
+spin = Spinbox(window, from_=0, to=100, width=5)
  
-    lbl.configure(text="Button was clicked !!")
- 
-btn = Button(window, text="Click Me", command=clicked)
- 
-btn.grid(column=1, row=0)
+spin.grid(column=1,row=2)
 
 bar = Progressbar(window, length=200, style='black.Horizontal.TProgressbar')
  
-bar['value'] = 70
+bar['value'] = 25
  
 bar.grid(column=0, row=2)
 
